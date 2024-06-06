@@ -1,0 +1,32 @@
+{% extends "blog/base.html" %}
+{% load static %}
+{% block title %} {{ block.super }} Signup {% endblock title %}
+
+{% block content %}
+
+    <h3 class="text-white mt-5 mb-1 text-center">Signup</h3>
+        
+
+    <form class="form-style" action="" method="post" novalidate>
+        {% csrf_token %}
+        {% for form in form %}
+        <div class="form-group">
+            {{form.label_tag}}
+            {{form}}
+            <small class="text-warning">{{form.errors | striptags}}</small> 
+        </div>
+        {% endfor %}
+
+        <div class="text-center">
+            <input type="submit" value="Signup" class="btn btn-primary mt-3 text-center">
+        </div>
+        
+        {% if form.non_field_errors %}
+            {% for error in form.non_field_errors %}
+                <p class="alert alert-danger my-3">{{error}}</p>
+            {% endfor %}
+        {% endif %}
+    </form>
+
+
+{% endblock content %}

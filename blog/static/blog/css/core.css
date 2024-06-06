@@ -1,0 +1,25 @@
+/* my css */
+
+body {
+    background-color: rgb(59, 58, 58);
+    color: antiquewhite;
+}
+
+.jumbo-color {
+    background-color: rgb(83, 81, 81);
+}
+
+.font-weight-bold {
+    font-weight: bold;
+}
+
+form.form-style {
+    max-width: 39ch;
+    margin: auto;
+}
+
+.form-post-style {
+    max-width: 59ch;
+    margin: auto;
+
+}
